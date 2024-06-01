@@ -5,7 +5,7 @@ const { where } = require("sequelize");
 class UserController {
   static async register(req, res, next) {
     const { email, gender, password, role } = req.body;
-    console.log(email + " Email Controller");
+    console.log(email + " Email Req Controller");
     try {
       const user = await UserService.register({
         email,
@@ -16,7 +16,8 @@ class UserController {
       console.log(user + " INI Controller");
       res.status(201).json(user);
     } catch (error) {
-      // next(error);
+      // console.error(erro);
+      next(error);
     }
   }
 

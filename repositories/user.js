@@ -4,7 +4,7 @@ class UserRepository {
   static async register(req, res, next) {
     try {
       const { email, gender, hashedPassword, role } = req;
-      console.log(email, gender, hashedPassword, role + " INI REPOOO");
+      console.log(email, gender, hashedPassword, role + " INI Req REPOOO");
 
       const user = await User.create({
         email,
@@ -14,10 +14,8 @@ class UserRepository {
       });
       console.log(user + " INI REPOO");
       return user;
-    } catch (err) {
-      // console.error("Error in UserRepository:", err);
-      // console.error(err);
-      next(err);
+    } catch (error) {
+      // next(error);
     }
   }
 }

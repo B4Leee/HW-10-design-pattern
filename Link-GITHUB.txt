@@ -1,0 +1,6 @@
+HW 10 : File & Design Pattern
+
+Link : https://github.com/B4Leee/HW-10-design-pattern.git
+
+Maaf mas Vincent untuk bagian user registernya masih error, tetapi untuk upload movie sudah berjalan sempurna.
+Terimakasih...

@@ -6,7 +6,7 @@ class UserService {
     const { email, gender, password, role } = req;
     const hashedPassword = bcrypt.hashSync(password, 8);
 
-    console.log(email, gender, password, role + " INI SERVICE");
+    console.log(email, gender, password, role + " INI Req SERVICE");
 
     try {
       const user = await UserRepository.register({
