@@ -16,7 +16,6 @@ class UserController {
       console.log(user + " INI Controller");
       res.status(201).json(user);
     } catch (error) {
-      // console.error(erro);
       next(error);
     }
   }

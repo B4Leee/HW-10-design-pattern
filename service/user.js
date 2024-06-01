@@ -2,7 +2,7 @@ const UserRepository = require("../repositories/user");
 const bcrypt = require("bcrypt");
 
 class UserService {
-  static async register(req, res, next) {
+  static async register(req) {
     const { email, gender, password, role } = req;
     const hashedPassword = bcrypt.hashSync(password, 8);
 
@@ -18,7 +18,7 @@ class UserService {
       console.log(user + " User Service");
       return user;
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   }
 }
